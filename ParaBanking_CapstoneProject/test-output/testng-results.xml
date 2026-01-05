@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-29T20:46:14 IST" name="Default suite" finished-at="2025-12-29T20:48:30 IST" duration-ms="135518">
+    <groups>
+    </groups>
+    <test started-at="2025-12-29T20:46:14 IST" name="Default test" finished-at="2025-12-29T20:48:30 IST" duration-ms="135518">
+      <class name="Tests.TS02_Verify_Login_Functionality">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:46:15 IST" name="setUp" finished-at="2025-12-29T20:46:50 IST" duration-ms="35160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testVerifyLoginFunctionality(java.util.Map)[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:46:50 IST" name="testVerifyLoginFunctionality" description="TS02_Verify Login Functionality" data-provider="register" finished-at="2025-12-29T20:46:54 IST" duration-ms="3466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=10B Bank street No.3, Username=TestUser7, FirstName=Test, State=Telangana, ZipCode=560020, Phone=8876543210, Confirm=Password@123, Country=India, LastName=User, City=Hyderabad, SSN=321-45-9876, Password=Password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifyLoginFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:46:54 IST" name="tearDown" finished-at="2025-12-29T20:46:54 IST" duration-ms="342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:46:54 IST" name="setUp" finished-at="2025-12-29T20:46:58 IST" duration-ms="3993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testVerifyLoginFunctionality(java.util.Map)[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:46:58 IST" name="testVerifyLoginFunctionality" description="TS02_Verify Login Functionality" data-provider="register" finished-at="2025-12-29T20:47:00 IST" duration-ms="2361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=680 Green Land road, Username=SampleTestUser7, FirstName=Sample, State=Telangana, ZipCode=560082, Phone=9654623261, Confirm=Password@1231, Country=India, LastName=TestUser, City=Hyderabad, SSN=321-45-9876, Password=Password@1231}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifyLoginFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS02_Verify_Login_Functionality@200606de]" started-at="2025-12-29T20:47:00 IST" name="tearDown" finished-at="2025-12-29T20:47:01 IST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.TS02_Verify_Login_Functionality -->
+      <class name="Tests.TS05_Verify_Profile_Update">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS05_Verify_Profile_Update@7957dc72]" started-at="2025-12-29T20:47:10 IST" name="setUp" finished-at="2025-12-29T20:47:17 IST" duration-ms="6938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testUpdateProfile(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.TS05_Verify_Profile_Update@7957dc72]" started-at="2025-12-29T20:47:17 IST" name="testUpdateProfile" data-provider="updateProfileData" finished-at="2025-12-29T20:47:26 IST" duration-ms="9514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8765432876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateProfile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS05_Verify_Profile_Update@7957dc72]" started-at="2025-12-29T20:47:26 IST" name="tearDown" finished-at="2025-12-29T20:47:27 IST" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.TS05_Verify_Profile_Update -->
+      <class name="Tests.TS04_Verify_Loan_Request">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS04_Verify_Loan_Request@70e0accd]" started-at="2025-12-29T20:47:01 IST" name="setUp" finished-at="2025-12-29T20:47:06 IST" duration-ms="5336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testVerifyLoanRequest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:0, instance:Tests.TS04_Verify_Loan_Request@70e0accd]" started-at="2025-12-29T20:47:06 IST" name="testVerifyLoanRequest" data-provider="loanRequestData" finished-at="2025-12-29T20:47:10 IST" duration-ms="3704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SampleTestUser7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@1231]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifyLoanRequest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS04_Verify_Loan_Request@70e0accd]" started-at="2025-12-29T20:47:10 IST" name="tearDown" finished-at="2025-12-29T20:47:10 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.TS04_Verify_Loan_Request -->
+      <class name="Tests.TS01_Verify_New_User_Registration">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:47:27 IST" name="setUp" finished-at="2025-12-29T20:47:30 IST" duration-ms="3707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterAccountSuccessful(java.util.Map)[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:47:30 IST" name="testRegisterAccountSuccessful" description="TC_001 - Verify user can register an account successfully" data-provider="register" finished-at="2025-12-29T20:47:53 IST" duration-ms="22539" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=10B Bank street No.3, Username=TestUser7, FirstName=Test, State=Telangana, ZipCode=560020, Phone=8876543210, Confirm=Password@123, Country=India, LastName=User, City=Hyderabad, SSN=321-45-9876, Password=Password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterAccountSuccessful -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:47:53 IST" name="tearDown" finished-at="2025-12-29T20:47:53 IST" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:47:53 IST" name="setUp" finished-at="2025-12-29T20:47:57 IST" duration-ms="3569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterAccountSuccessful(java.util.Map)[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:47:57 IST" name="testRegisterAccountSuccessful" description="TC_001 - Verify user can register an account successfully" data-provider="register" finished-at="2025-12-29T20:48:20 IST" duration-ms="22938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=680 Green Land road, Username=SampleTestUser7, FirstName=Sample, State=Telangana, ZipCode=560082, Phone=9654623261, Confirm=Password@1231, Country=India, LastName=TestUser, City=Hyderabad, SSN=321-45-9876, Password=Password@1231}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterAccountSuccessful -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS01_Verify_New_User_Registration@3aacf32a]" started-at="2025-12-29T20:48:20 IST" name="tearDown" finished-at="2025-12-29T20:48:20 IST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.TS01_Verify_New_User_Registration -->
+      <class name="Tests.TS03_Verify_Fund_Transfer_Between_Accounts">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:Tests.TS03_Verify_Fund_Transfer_Between_Accounts@4fdfa676]" started-at="2025-12-29T20:48:20 IST" name="setUp" finished-at="2025-12-29T20:48:24 IST" duration-ms="3679" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTransferfunds(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.TS03_Verify_Fund_Transfer_Between_Accounts@4fdfa676]" started-at="2025-12-29T20:48:24 IST" name="testTransferfunds" data-provider="transferData" finished-at="2025-12-29T20:48:29 IST" duration-ms="5887" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SampleTestUser7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@1231]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SAVINGS]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTransferfunds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.TS03_Verify_Fund_Transfer_Between_Accounts@4fdfa676]" started-at="2025-12-29T20:48:29 IST" name="tearDown" finished-at="2025-12-29T20:48:30 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.TS03_Verify_Fund_Transfer_Between_Accounts -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

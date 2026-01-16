@@ -3,27 +3,27 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.TC_04_Verify_Loan_Request">
+      <class name="Tests.TS04_Verify_Loan_Request">
         <methods>
           <include name="testVerifyLoanRequest" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Tests.TC_04_Verify_Loan_Request -->
-      <class name="Tests.TC_02_VerifyLoginFunctionality">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testVerifyLoginFunctionality" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- Tests.TC_02_VerifyLoginFunctionality -->
-      <class name="Tests.TC_05_Verify_Profile_Update">
+      </class> <!-- Tests.TS04_Verify_Loan_Request -->
+      <class name="Tests.TS05_Verify_Profile_Update">
         <methods>
           <include name="testUpdateProfile" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Tests.TC_05_Verify_Profile_Update -->
+      </class> <!-- Tests.TS05_Verify_Profile_Update -->
+      <class name="Tests.TS02_Verify_Login_Functionality">
+        <methods>
+          <include name="testVerifyLoginFunctionality" invocation-numbers="0 1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Tests.TS02_Verify_Login_Functionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

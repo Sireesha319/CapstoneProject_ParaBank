@@ -1,0 +1,8 @@
+Tests\TS04_Verify_Loan_Request.class
+Tests\TS03_Verify_Fund_Transfer_Between_Accounts.class
+DataProviders\DataProviders.class
+Tests\TS01_Verify_New_User_Registration.class
+Tests\TS02_Verify_Login_Functionality.class
+Tests\TS05_Verify_Profile_Update.class
+Listeners\Listeners_Test.class
+Tests\BaseTest.class

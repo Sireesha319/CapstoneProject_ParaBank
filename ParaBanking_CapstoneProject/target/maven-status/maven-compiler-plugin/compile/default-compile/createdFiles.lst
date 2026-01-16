@@ -1,0 +1,15 @@
+Pages\UpdateProfilePage.class
+Pages\LoanRequestPage.class
+Utils\ConfigReader.class
+Pages\OverviewPage.class
+Pages\UserDetails.class
+Pages\BasePage.class
+Pages\HomePage.class
+Drivers\DriverFactory.class
+Pages\OpenAccount.class
+Utils\ExtentManager.class
+Drivers\DriverManager.class
+Utils\ExcelUtils.class
+Utils\waitUtils.class
+Pages\RegisterPage.class
+Pages\TransferPage.class

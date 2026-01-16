@@ -4,7 +4,7 @@
 
 
 	<listeners>
-		<listener class-name="listeners.TestListeners"></listener>
+		<listener class-name="Listeners.Listeners_Test"></listener>
 	</listeners>
 
 	  <test thread-count="5" name="Test">
@@ -12,14 +12,14 @@
 			 <parameter name="browser" value="chrome"/>	
 		  	<classes>
 		  		
-		  		    <class name="tests.TS01_Verify_New_User_Registration"/>
+		  		    <class name="Tests.TS01_Verify_New_User_Registration"/>
 		  		
-		  		  <class name="tests.TS02_Verify_Login_Functionality"/>
+		  		  <class name="Tests.TS02_Verify_Login_Functionality"/>
 		  	
 					
-		  			 <class name="tests.TS03_Verify_Fund_Transfer_Between_Accounts"/>
-					 <class name="tests.TS04_Verify_Loan_Request"/> 
-		  			 <class name="tests.TS05_Verify_Profile_Update"/>
+		  			 <class name="Tests.TS03_Verify_Fund_Transfer_Between_Accounts"/>
+					 <class name="Tests.TS04_Verify_Loan_Request"/> 
+		  			 <class name="Tests.TS05_Verify_Profile_Update"/>
 	
 	  			
 	  		

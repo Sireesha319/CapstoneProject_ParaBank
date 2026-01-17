@@ -1,0 +1,983 @@
+{
+  "info": {
+    "_postman_id": "a1094b0f-8995-42de-8ba6-e172ca16ba78",
+    "name": "ParaBank_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51481178",
+    "_collection_link": "https://go.postman.co/collection/51481178-a1094b0f-8995-42de-8ba6-e172ca16ba78?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET Customer Details (Valid)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "})\r",
+              "pm.test(\"Response time is less than 5000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "})\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "pm.test(\"Has Customer fields\", () => {\r",
+              "    \r",
+              "    pm.expect(jsonData).to.have.property(\"id\");\r",
+              "    pm.expect(jsonData.id).to.be.a(\"number\");\r",
+              "\r",
+              "    pm.expect(jsonData).to.have.property(\"firstName\");\r",
+              "    pm.expect(jsonData.firstName).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData).to.have.property(\"lastName\");\r",
+              "    pm.expect(jsonData.lastName).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData).to.have.property(\"address\");\r",
+              "    pm.expect(jsonData.address).to.be.an(\"object\");\r",
+              "    \r",
+              "    pm.expect(jsonData.address).to.have.property(\"street\");\r",
+              "    pm.expect(jsonData.address.street).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData.address).to.have.property(\"city\");\r",
+              "    pm.expect(jsonData.address.city).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData.address).to.have.property(\"state\");\r",
+              "    pm.expect(jsonData.address.state).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData.address).to.have.property(\"zipCode\");\r",
+              "    pm.expect(jsonData.address.zipCode).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData).to.have.property(\"phoneNumber\");\r",
+              "    pm.expect(jsonData.phoneNumber).to.be.a(\"string\");\r",
+              "\r",
+              "    pm.expect(jsonData).to.have.property(\"ssn\");\r",
+              "    pm.expect(jsonData.ssn).to.be.a(\"string\");\r",
+              "});\r",
+              "\r",
+              "\r",
+              "const schema = {\r",
+              "\r",
+              "        \"type\": \"object\",\r",
+              "        \"properties\": {\r",
+              "            \"id\": {\r",
+              "            \"type\": \"integer\"\r",
+              "            },\r",
+              "            \"firstName\": {\r",
+              "            \"type\": \"string\"\r",
+              "            },\r",
+              "            \"lastName\": {\r",
+              "            \"type\": \"string\"\r",
+              "            },\r",
+              "            \"address\": {\r",
+              "            \"type\": \"object\",\r",
+              "            \"properties\": {\r",
+              "                \"street\": {\r",
+              "                \"type\": \"string\"\r",
+              "                },\r",
+              "                \"city\": {\r",
+              "                \"type\": \"string\"\r",
+              "                },\r",
+              "                \"state\": {\r",
+              "                \"type\": \"string\"\r",
+              "                },\r",
+              "                \"zipCode\": {\r",
+              "                \"type\": \"string\"\r",
+              "                }\r",
+              "            },\r",
+              "            \"required\": [\r",
+              "                \"street\",\r",
+              "                \"city\",\r",
+              "                \"state\",\r",
+              "                \"zipCode\"\r",
+              "            ]\r",
+              "            },\r",
+              "            \"phoneNumber\": {\r",
+              "            \"type\": \"string\"\r",
+              "            },\r",
+              "            \"ssn\": {\r",
+              "            \"type\": \"string\"\r",
+              "            }\r",
+              "        },\r",
+              "        \"required\": [\r",
+              "            \"id\",\r",
+              "            \"firstName\",\r",
+              "            \"lastName\",\r",
+              "            \"address\",\r",
+              "            \"phoneNumber\",\r",
+              "            \"ssn\"\r",
+              "  ]\r",
+              "}\r",
+              "\r",
+              "\r",
+              "pm.test(\"Schema is valid\", () => {\r",
+              "    pm.expect(jsonData).to.have.jsonSchema(schema);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/services/bank/customers/{{customerId}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "customers",
+            "{{customerId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Customer Details (invalid)",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// List of invalid IDs for negative testing\r",
+              "const invalidIds = [\"0\", \"-1\", \"abc\", \"!@#\", \"99999999\"];\r",
+              "\r",
+              "// Store in environment variable for use in Tests tab\r",
+              "pm.environment.set(\"invalidIds\", JSON.stringify(invalidIds));\r",
+              "\r",
+              "console.log(\"Invalid IDs set in environment:\", invalidIds);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Load invalid IDs from environment\r",
+              "const ids = JSON.parse(pm.environment.get(\"invalidIds\"));\r",
+              "\r",
+              "const baseUrl = pm.environment.get(\"base_url\")\r",
+              "\r",
+              "pm.test(\"Running negative tests for invalid customer IDs\", () => {\r",
+              "    console.log(\"Executing negative tests...\");\r",
+              "});\r",
+              "\r",
+              "// Loop through all invalid IDs\r",
+              "ids.forEach(id => {\r",
+              "\r",
+              "    pm.sendRequest({\r",
+              "        url: `${baseUrl}/services/bank/customers/${id}`,\r",
+              "        method: \"GET\",\r",
+              "        header: { \"Accept\": \"application/json\" }\r",
+              "    }, (err, res) => {\r",
+              "\r",
+              "        console.log(`Testing invalid ID: ${id}, Status: ${res.code}`);\r",
+              "\r",
+              "        // Should not return OK\r",
+              "        pm.test(`Invalid ID ${id} should NOT return 200`, () => {\r",
+              "            pm.expect(res.code).not.to.eql(200);\r",
+              "        });\r",
+              "\r",
+              "        // Should return an error code\r",
+              "        pm.test(`Invalid ID ${id} returns error`, () => {\r",
+              "            pm.expect([400, 404, 405, 500]).to.include(res.code);\r",
+              "        });\r",
+              "\r",
+              "    });\r",
+              "\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/services/bank/customers/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Customer Account details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "})\r",
+              "pm.test(\"Response time is less than 2000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "})\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "\r",
+              "\r",
+              "pm.test(\"Validate all account objects\", () => {\r",
+              "\r",
+              "    // Response must be an array\r",
+              "    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\r",
+              "\r",
+              "    jsonData.forEach(item => {\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"id\");\r",
+              "        pm.expect(item.id).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"customerId\");\r",
+              "        pm.expect(item.customerId).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"type\");\r",
+              "        pm.expect(item.type).to.be.a(\"string\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"balance\");\r",
+              "        pm.expect(item.balance).to.be.a(\"number\");\r",
+              "\r",
+              "    });\r",
+              "});\r",
+              "\r",
+              "\r",
+              "\r",
+              "const schema = {\r",
+              "\r",
+              "  \"title\": \"AccountList\",\r",
+              "  \"type\": \"array\",\r",
+              "  \"items\": {\r",
+              "    \"type\": \"object\",\r",
+              "    \"properties\": {\r",
+              "      \"id\": {\r",
+              "        \"type\": \"integer\"\r",
+              "      },\r",
+              "      \"customerId\": {\r",
+              "        \"type\": \"integer\"\r",
+              "      },\r",
+              "      \"type\": {\r",
+              "        \"type\": \"string\",\r",
+              "        \"enum\": [\"CHECKING\", \"SAVINGS\", \"CURRENT\", \"LOAN\"]\r",
+              "      },\r",
+              "      \"balance\": {\r",
+              "        \"type\": \"number\"\r",
+              "      }\r",
+              "    },\r",
+              "    \"required\": [\"id\", \"customerId\", \"type\", \"balance\"]\r",
+              "  }\r",
+              "}\r",
+              "\r",
+              "\r",
+              "\r",
+              "pm.test(\"Schema is valid\", () => {\r",
+              "    pm.expect(jsonData).to.have.jsonSchema(schema);\r",
+              "});\r",
+              "\r",
+              "if (jsonData.length > 0) {\r",
+              "    pm.environment.set(\"FromAccountId\", jsonData[0].id);\r",
+              "}\r",
+              "\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/services/bank/customers/{{customerId}}/accounts",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "customers",
+            "{{customerId}}",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get the list of Transactions for the Account",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "})\r",
+              "pm.test(\"Response time is less than 2000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "})\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response body is not empty\", () => {\r",
+              "    pm.expect(jsonData).to.not.be.empty;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"All transactions have a valid id\", () => {\r",
+              "    jsonData.forEach(transaction => {\r",
+              "        pm.expect(transaction).to.have.property(\"id\");\r",
+              "        pm.expect(transaction.id).to.be.a('number');\r",
+              "\r",
+              "        pm.expect(transaction).to.have.property(\"accountId\");\r",
+              "        pm.expect(transaction.accountId).to.be.a('number');\r",
+              "\r",
+              "        pm.expect(transaction).to.have.property(\"type\");\r",
+              "        pm.expect(transaction.type).to.be.oneOf(['Credit', 'Debit']);\r",
+              "\r",
+              "        pm.expect(transaction).to.have.property(\"date\");\r",
+              "        pm.expect(transaction.date).to.be.a('number');\r",
+              "\r",
+              "        pm.expect(transaction).to.have.property(\"amount\");\r",
+              "        pm.expect(transaction.amount).to.be.a('number');\r",
+              "\r",
+              "        pm.expect(transaction).to.have.property(\"description\");\r",
+              "        pm.expect(transaction.description).to.be.a('string');\r",
+              "\r",
+              "    });\r",
+              "});\r",
+              "\r",
+              "\r",
+              "const schema = {\r",
+              "\r",
+              "  \"type\": \"array\",\r",
+              "  \"properties\": {\r",
+              "    \"id\": {\r",
+              "      \"type\": \"integer\"\r",
+              "    },\r",
+              "    \"accountId\": {\r",
+              "      \"type\": \"integer\"\r",
+              "    },\r",
+              "    \"type\": {\r",
+              "      \"type\": \"string\"\r",
+              "    },\r",
+              "    \"date\": {\r",
+              "      \"type\": \"integer\"\r",
+              "    },\r",
+              "    \"amount\": {\r",
+              "      \"type\": \"number\"\r",
+              "    },\r",
+              "    \"description\": {\r",
+              "      \"type\": \"string\"\r",
+              "    }\r",
+              "  },\r",
+              "  \"required\": [\r",
+              "    \"id\",\r",
+              "    \"accountId\",\r",
+              "    \"type\",\r",
+              "    \"date\",\r",
+              "    \"amount\",\r",
+              "    \"description\"\r",
+              "  ]\r",
+              "}\r",
+              "\r",
+              "pm.test(\"Schema is valid\", () => {\r",
+              "    pm.expect(jsonData).to.have.jsonSchema(schema);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"All transactions have the same accountId\", () => {\r",
+              "\r",
+              "    // take the first accountId from the response\r",
+              "    const accountId = jsonData[0].accountId;\r",
+              "\r",
+              "    // loop through all items\r",
+              "    jsonData.forEach(item => {\r",
+              "        pm.expect(item.accountId).to.equal(accountId);\r",
+              "    });\r",
+              "\r",
+              "});\r",
+              "\r",
+              "\r",
+              "pm.test(\"Date must be a valid numeric timestamp\", () => {\r",
+              "    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\r",
+              "\r",
+              "    jsonData.forEach(item => {\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"date\");\r",
+              "        pm.expect(item.date).to.be.a(\"number\"); // timestamp must be number\r",
+              "\r",
+              "        // Convert to Date and validate\r",
+              "        let convertedDate = new Date(item.date);\r",
+              "\r",
+              "        pm.expect(convertedDate.getTime(), `Invalid timestamp: ${item.date}`)\r",
+              "            .to.not.be.NaN;\r",
+              "    });\r",
+              "});\r",
+              "\r",
+              "pm.environment.set(\"amount\",jsonData[0].amount);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/services/bank/accounts/{{accountId}}/transactions",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "accounts",
+            "{{accountId}}",
+            "transactions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET  Filter Transactions by Amount Copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "})\r",
+              "pm.test(\"Response time is less than 2000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "})\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response body has correct data\", () => {\r",
+              "\r",
+              "    pm.expect(jsonData).to.not.be.empty;\r",
+              "    jsonData.forEach(item=>{\r",
+              "        pm.expect(item).to.have.property(\"id\");\r",
+              "        pm.expect(item.id).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"accountId\");\r",
+              "        pm.expect(item.accountId).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"type\");\r",
+              "        pm.expect(item.type).to.be.a(\"string\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"date\");\r",
+              "        pm.expect(item.date).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"amount\");\r",
+              "        pm.expect(item.amount).to.be.a(\"number\");\r",
+              "\r",
+              "        pm.expect(item).to.have.property(\"description\");\r",
+              "        pm.expect(item.description).to.be.a(\"string\");\r",
+              "\r",
+              "    })\r",
+              "\r",
+              "})\r",
+              "\r",
+              "\r",
+              "const schema = {\r",
+              " \r",
+              "  \"type\": \"array\",\r",
+              "  \"items\": [\r",
+              "    {\r",
+              "      \"type\": \"object\",\r",
+              "      \"properties\": {\r",
+              "        \"id\": {\r",
+              "          \"type\": \"integer\"\r",
+              "        },\r",
+              "        \"accountId\": {\r",
+              "          \"type\": \"integer\"\r",
+              "        },\r",
+              "        \"type\": {\r",
+              "          \"type\": \"string\"\r",
+              "        },\r",
+              "        \"date\": {\r",
+              "          \"type\": \"integer\"\r",
+              "        },\r",
+              "        \"amount\": {\r",
+              "          \"type\": \"number\"\r",
+              "        },\r",
+              "        \"description\": {\r",
+              "          \"type\": \"string\"\r",
+              "        }\r",
+              "      },\r",
+              "      \"required\": [\r",
+              "        \"id\",\r",
+              "        \"accountId\",\r",
+              "        \"type\",\r",
+              "        \"date\",\r",
+              "        \"amount\",\r",
+              "        \"description\"\r",
+              "      ]\r",
+              "    }\r",
+              "  ]\r",
+              "}\r",
+              "\r",
+              "pm.test(\"Response body is valid JSON\", () => {\r",
+              "     pm.expect(jsonData).to.have.jsonSchema(schema);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Amount Filter Validation\",()=>{\r",
+              "    pm.expect(jsonData[0].amount).to.equal(Number(pm.environment.get(\"amount\")));\r",
+              "})\r",
+              "\r",
+              "pm.test(\"All returned items must have the same accountId\",()=>{\r",
+              "    pm.expect(jsonData[0].accountId).to.equal(Number(pm.environment.get(\"accountId\")));\r",
+              "})\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/services/bank/accounts/{{accountId}}/transactions/amount/{{amount}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "accounts",
+            "{{accountId}}",
+            "transactions",
+            "amount",
+            "{{amount}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Transfer Funds",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Response time is less than 2000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+              "});\r",
+              "\r",
+              "\r",
+              "pm.test(\"Response body contains successful transfer message\", () => {\r",
+              "   pm.expect(pm.response.text()).to.include(\"Successfully transferred $100 from account #13344 to account #12456\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/services/bank/transfer?fromAccountId=13344&toAccountId=12456&amount=100",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "transfer"
+          ],
+          "query": [
+            {
+              "key": "fromAccountId",
+              "value": "13344"
+            },
+            {
+              "key": "toAccountId",
+              "value": "12456"
+            },
+            {
+              "key": "amount",
+              "value": "100"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Withdrawal Funds",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "})\r",
+              "pm.test(\"Response time is less than 2000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "})\r",
+              "\r",
+              "pm.test(\"Response body contains successful transfer message\", () => {\r",
+              "    pm.expect(pm.response.text()).to.include(\"Successfully withdrew $100 from account #13344\");\r",
+              "})"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/services/bank/withdraw?accountId=13344&amount=100",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "withdraw"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "13344"
+            },
+            {
+              "key": "amount",
+              "value": "100"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create a new Account",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\",()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 3000ms\",()=>\r",
+              "{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Content-type is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+              "});\r",
+              "\r",
+              "let contentType = pm.response.headers.get(\"Content-Type\");\r",
+              "let jsonData;\r",
+              "\r",
+              "if (contentType && contentType.includes(\"application/json\")) {\r",
+              "    jsonData = pm.response.json();\r",
+              "\r",
+              "    pm.test(\"Response body has correct data\", () => {\r",
+              "\r",
+              "        pm.expect(jsonData).to.have.property(\"id\").that.is.a(\"number\");\r",
+              "\r",
+              "        pm.expect(jsonData).to.have.property(\"customerId\").that.is.a(\"number\");\r",
+              "\r",
+              "        pm.expect(jsonData).to.have.property(\"type\").that.is.a(\"string\");\r",
+              "\r",
+              "        pm.expect(jsonData).to.have.property(\"balance\").that.is.a(\"number\");\r",
+              "\r",
+              "    });\r",
+              "\r",
+              "    const schema = {\r",
+              "        type: \"object\",\r",
+              "        required: [\"id\", \"customerId\", \"type\", \"balance\"],\r",
+              "        properties: {\r",
+              "            id: { type: \"number\" },\r",
+              "            customerId: { type: \"number\" },\r",
+              "            type: { type: \"string\", enum: [\"CHECKING\", \"SAVINGS\", \"LOAN\"] },\r",
+              "            balance: { type: \"number\" }\r",
+              "        }\r",
+              "    };\r",
+              "\r",
+              "    pm.test(\"Schema is valid\", () => {\r",
+              "        pm.expect(tv4.validate(jsonData, schema)).to.be.true;\r",
+              "    });\r",
+              "\r",
+              "} else {\r",
+              "    pm.test(\"Response is error text, not JSON\", () => {\r",
+              "        pm.expect(pm.response.text()).to.include(\"Could not create new account\");\r",
+              "    });\r",
+              "}\r",
+              "\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=12456",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "services",
+            "bank",
+            "createAccount"
+          ],
+          "query": [
+            {
+              "key": "customerId",
+              "value": "12212"
+            },
+            {
+              "key": "newAccountType",
+              "value": "1"
+            },
+            {
+              "key": "fromAccountId",
+              "value": "12456"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
